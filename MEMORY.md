@@ -26,8 +26,22 @@
 - All changes: Committed to jayjan repo
 - Session recovery: Read from jayjan repo
 
+## church.mbitebyte.com (Ministry Subdomain - Church of Christ)
+- **Live**: https://church.mbitebyte.com/
+- **Hosting**: MilesWeb shared hosting (LiteSpeed)
+- **Vhost doc root**: `/var/www/6ea78814-8fbb-4422-9393-740e7ea2b07b/church.mbitebyte.com/`
+- **MySQL**: DB=torque_520_cHyV, User=torque_520_ZxRg, Pass=[REDACTED] prefix=wp_
+- **WP Admin**: https://church.mbitebyte.com/wp-login.php (admin / Ln6}Fz4.Fi4_=*)
+- **Theme**: faithful-messenger (custom WP theme, local backup at /home/jay/faithful-messenger-theme/)
+- **FTP**: church@mbitebyte.com / `hj8NZwq6#q$c` / port 21
+- **Pages**: Home, About, Teachings, Services, Events, Ministries, Give, Prayer, Contact
+- **Custom PTs**: Prayer Requests, Sermons/Teachings, Events
+- **Lesson**: LiteSpeed server cache must be purged via mPanel (not just plugin deactivation)
+- **Lesson**: functions.php parse error fixed (`<?php selected()` → `echo selected(..., false)`)
+
 ## Status
 
 - VDNA upload: DISABLED (manual review)
 - MBite Pulse: Active, syncing from YouTube RSS
 - Google Search Console: Configured for mbitebyte.com
+- church.mbitebyte.com: LIVE with Faithful Messenger theme + placeholder content
