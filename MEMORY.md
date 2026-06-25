@@ -51,9 +51,29 @@
 - **Changelog**: `projects/vdna3/changelog.md`
 - **Session**: `sessions/2026-06-25-vdna3-growth-readiness.md`
 
+## theviraldna.mbitebyte.com (Cross-Platform Blog — Phase 1)
+
+- **Live**: https://theviraldna.mbitebyte.com/
+- **Hosting**: MilesWeb shared hosting (LiteSpeed), 45.199.139.16
+- **Theme**: Twenty Twenty-Five
+- **WP Admin**: https://theviraldna.mbitebyte.com/wp-admin (theviraldna_admin / b7qNRCsG93b!)
+- **FTP**: church@mbitebyte.com / hj8NZwq6#q$c / port 21
+- **Rank Math SEO**: Installed and activated
+- **Pages**: About (id=6), Contact (id=11), Privacy Policy (id=3) — all HTTP 200
+- **Categories (8)**: Economy(9), Technology(8), World News(7), Viral Stories(6), Breaking News(5), News & Politics(4), Opinion(3), Uncategorized(1)
+- **Publisher Script**: /home/jay/ViralDNA/modules/wordpress_publisher.py
+- **Auth Method**: Cookie + X-WP-Nonce (Basic Auth blocked by security plugin)
+- **Step 10.24**: Integrated in vdna2_director.py after Growth Observer, triggers on YouTube upload success
+- **Publisher Status**: FULLY FUNCTIONAL ✅ (17/17 ad-hoc checks passed)
+- **REST API**: Cookie auth works for reads AND writes (POST/DELETE) with X-WP-Nonce header
+- **Note**: Frontend HTTP 444 for bot UA (LiteSpeed security) — posts still created/deleted fine via API
+- **Note**: WordPress returns &amp; for & in names — must use html.unescape() for comparison
+- **Note**: REST search for "News & Politics" returns 0 — must search first word only ("News") then filter
+
 ## Status
 
 - VDNA upload: DISABLED (manual review)
 - MBite Pulse: Active, syncing from YouTube RSS
 - Google Search Console: Configured for mbitebyte.com
 - church.mbitebyte.com: LIVE with Faithful Messenger theme + placeholder content
+- theviraldna.mbitebyte.com: LIVE — WordPress blog operational with publisher integration

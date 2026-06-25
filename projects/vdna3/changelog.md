@@ -26,3 +26,29 @@
 - Ad-hoc verification scripts: all passed
 
 ### VDNA 3.0 Readiness: READY ✅
+
+---
+
+## 2026-06-25 — Option D Phase 1: WordPress Blog Setup + Publisher Integration
+
+### WordPress Blog Setup
+- theviraldna.mbitebyte.com live with Twenty Twenty-Five theme
+- Rank Math SEO installed and activated
+- 3 pages created: About, Contact, Privacy Policy (all HTTP 200)
+- 8 categories created via browser UI: Economy, Technology, World News, Viral Stories, Breaking News, News & Politics, Opinion, Uncategorized
+- Site title: "The ViralDNA", Tagline: "News That Goes Viral — Automated News Coverage"
+
+### Publisher Script (wordpress_publisher.py)
+- 17/17 ad-hoc verification checks passed
+- Auth method: Cookie + X-WP-Nonce (Basic Auth blocked by security plugin)
+- Handles HTML-entity encoding (&amp; → &) via html.unescape()
+- Broad search fallback for categories with special characters
+- create_news_post() production path fully functional
+- Step 10.24 integrated in vdna2_director.py after Growth Observer
+
+### Key Technical Lessons
+- theviraldna_admin has Administrator role in dashboard but Basic Auth REST returns 401
+- Cookie auth + X-WP-Nonce header = working write path
+- REST search for "News & Politics" returns 0 results — must search "News" and filter
+- WordPress returns &amp; for & in term names — decode before comparing
+- LiteSpeed server returns HTTP 444 for bot User-Agent (posts still created via API)
