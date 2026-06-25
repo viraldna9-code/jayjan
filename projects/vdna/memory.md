@@ -3,15 +3,15 @@
 ## Project Overview
 - Autonomous Telugu newsroom pipeline
 - 73+ Python modules
-- Current version: v83.0
+- Current version: v96.0 (3.0 pipeline)
 - GCP Project: theviraldna
 - GitHub: viraldna9-code/ViralDNA
 - Local: /home/jay/ViralDNA/
 
 ## Production Policy
 - Once videos published to YouTube: NEVER delete (permanent no-delete policy)
-- Upload currently DISABLED (manual review mode)
-- Videos go to /home/jay/ViralDNA/videos/ after pipeline run
+- Upload enabled on explicit request (VIRALDNA_UPLOAD_ENABLED=true flag)
+- Videos go to /home/jay/ViralDNA/video_output/ after pipeline run
 
 ## YouTube
 - Channel: "The ViralDNA" (UCkW7fqkJiaej2PeNcP4PejQ)
