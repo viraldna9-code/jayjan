@@ -41,3 +41,29 @@ All 4 options completed. VDNA 3.0 is ready for next execution.
 - All ad-hoc verification scripts passed
 
 ## Verdict: VDNA 3.0 READY ✅
+
+---
+
+## Afternoon Work — Option D Phase 1: WordPress Blog + Publisher
+
+### Completed
+- WordPress blog live at theviraldna.mbitebyte.com (Twenty Twenty-Five theme)
+- 3 pages: About, Contact, Privacy Policy (all HTTP 200)
+- 8 categories created via browser UI
+- Rank Math SEO installed
+- wordpress_publisher.py rewritten with Cookie + X-WP-Nonce auth (17/17 checks passed)
+- Step 10.24 integrated in vdna2_director.py (auto-publish after YouTube upload)
+- Duplicate page (Privacy PolicyContact) permanently deleted
+- All categories verified: Economy(9), Technology(8), World News(7), Viral Stories(6), Breaking News(5), News & Politics(4), Opinion(3), Uncategorized(1)
+
+### Key Discovery
+- theviraldna_admin has Administrator role but Basic Auth REST returns 401
+- Cookie auth + X-WP-Nonce header = working write path
+- REST search for "News & Politics" returns 0 — must search first word and filter
+- WordPress returns &amp; for & in names — html.unescape() required for comparison
+
+### Pending
+- Navigation menu configuration (Twenty Twenty-Five theme has nav-menu.php errors)
+- Backfill existing YouTube videos as blog posts
+- Submit sitemap to Google Search Console
+- Full cross-platform distribution (Phase 2+)
