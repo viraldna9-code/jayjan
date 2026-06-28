@@ -15,9 +15,23 @@
 
 ## YouTube
 - Channel: "The ViralDNA" (UCkW7fqkJiaej2PeNcP4PejQ)
+- Handle: @TheViralDNA
+- Subscribe: https://youtube.com/@TheViralDNA?sub_confirmation=1
 - Category: 25 (News & Politics)
 - Privacy: private
 - OAUTH: Manual terminal flow only (PKCE challenge binds URL+code to same process)
+
+## theviraldna.mbitebyte.com (Blog)
+- Live: https://theviraldna.mbitebyte.com/
+- Theme: Twenty Twenty-Five (block theme)
+- Home template: custom 2-column layout (home.html)
+- Pages: About (6), Contact (11), Privacy (3)
+- Posts: 6 live (IDs 26, 48, 49, 50, 51 + default)
+- Plugin: vdna-seo.php v1.2.0 (SEO, meta tags, footer JS, sidebar, CSS)
+- OG image: wp-content/uploads/2026/06/viraldna-og-default.jpg
+- GSC: verified + sitemap submitted
+- FTP: church@mbitebyte.com @ 45.199.139.16:21 (old, working)
+- NEW FTP FAILING: theviraldna@mbitebyte.com (530 error)
 
 ## Thumbnail Pipeline (v22.1)
 - NewsPayload strips " - Source Name" from Google News RSS titles (35+ known sources)
@@ -30,18 +44,10 @@
 - Daily Analytics: 6AM IST
 - Weekly Analytics: Sun 6AM
 
-## Person-Image Fix (v82.4)
-- 3-layer defense: text check → keyword overlap → Gemini Vision
-- Text-first to avoid burning API quota
-- Fail-closed on 429 rate limit
-- Keyword overlap < 10% rejects unrelated images
-
-## Serper Keys
-- Primary + backup in ~/.env
-- 40-char format with X-API-KEY header
-
 ## Key Files
 - /home/jay/ViralDNA/docs/PRODUCTION.md
 - /home/jay/ViralDNA/docs/PRODUCTION_HANDOFF.md
 - /home/jay/ViralDNA/docs/CRON_REGISTRY.md
 - /home/jay/ViralDNA/CHANGELOG.md
+- /tmp/vdna-seo-v120.php — latest plugin source
+- /tmp/vdna-home-new.html — latest home template
