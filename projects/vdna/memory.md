@@ -32,6 +32,7 @@
 - GSC: verified + sitemap submitted
 - FTP: church@mbitebyte.com @ 45.199.139.16:21 (old, working)
 - NEW FTP FAILING: theviraldna@mbitebyte.com (530 error)
+- Auth: wordpress_publisher.py uses cookie + nonce (Basic auth returns 444)
 
 ## Thumbnail Pipeline (v22.1)
 - NewsPayload strips " - Source Name" from Google News RSS titles (35+ known sources)
