@@ -8,6 +8,8 @@
 - Videos: 88 files on disk (29 mains + 58 shorts), 16 YouTube published
 - **Production policy**: NO DELETE after YouTube publish
 - Upload: manual agent (VIRALDNA_UPLOAD_ENABLED=false)
+- **Publish schedule**: main +1hr, shorts +30min after upload (relative timing)
+- **Thumbnails**: large centered text (80px max), vertically+horizontally centered
 - Changelog: `projects/vdna/changes.md`
 
 ### theviraldna.mbitebyte.com (Blog — Phase 1 COMPLETE)

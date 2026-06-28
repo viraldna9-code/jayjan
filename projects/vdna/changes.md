@@ -1,5 +1,31 @@
 # ViralDNA — Changes Log
 
+## 2026-06-28 — Publish Scheduling + Thumbnail Centering + Upload
+
+### Publish Schedule Rule
+- Main video: +1 hour after upload, Shorts: +30 minutes after upload
+- config.py: main_publish_delay_minutes=60, shorts_publish_gap_minutes=30, static times=None
+- youtube_uploader.py: fixed shorts fallback (was now+60min, corrected to now+30min)
+- vdna2_director.py: logs schedule rule during upload phase
+
+### Thumbnail: Large Centered Text
+- headline_max_size: 56→80px, min_size: 36→52px
+- _calc_text_position: center vertically (was bottom-anchored)
+- Horizontal centering (was left-aligned)
+- _get_adaptive_font_size: larger breakpoints (25→80, 40→72, 60→64, 80→58, 100→54, else→52)
+- Content coverage: ~20%→62% of frame, text center at y=359 (frame center=360)
+- local_image_pack.py warnings silenced (os.path.exists guard, file doesn't exist)
+
+### Upload (Ketan Agarwal murder case)
+- Main: S5f7vBgfmf8 — scheduled 12:35 IST
+- Short1: N4s742JUTWg — scheduled 12:05 IST
+- Short2: YjxlusvHaaw — scheduled 12:05 IST
+- Custom thumbnails uploaded for all 3 videos
+- Pinned comments failed (403 scope — non-critical)
+
+### Git Commit
+- 614ca88: feat: publish scheduling + centered thumbnail text
+
 ## 2026-06-26 — theviraldna.mbitebyte.com SEO + Layout Fixes
 
 ### SEO Plugin (vdna-seo.php v1.2.0)
