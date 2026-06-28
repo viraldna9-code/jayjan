@@ -34,7 +34,10 @@
 - Theme: wp-content/themes/faithful-messenger/
 
 ### mbitebyte.com (MBite Corporate)
-- Pulse page syncing from YouTube RSS
+- **Pulse page = client-facing technical showcase** (NOT YouTube RSS feed as of Jun 28)
+  - 3 inline deep-dives: Architecture, Voice AI, End-to-End Pipeline
+  - 10-phase pipeline diagram, hero stats, CTA
+  - Template at theme root: page-pulse.php (450 lines)
 - GSC verified, sitemap active
 
 ## Key Environment
