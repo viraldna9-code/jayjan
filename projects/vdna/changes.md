@@ -111,3 +111,19 @@
 
 ## Earlier Versions
 - See /home/jay/ViralDNA/CHANGELOG.md for full history
+
+## 2026-06-29 — Blog + VDNA 3.0 Bidirectional Integration
+
+### What changed
+Blog posts and YouTube videos are now fully integrated as a single "content unit":
+- Shared content_id (MD5 of title, 12 chars) links video + blog at the data level
+- Video description includes "📖 Read the full article: {blog_url}" (bidirectional)
+- Every blog post has CTA box at bottom promoting the matching video
+- When video not yet uploaded, blog shows "🎬 Video coming soon, subscribe" placeholder
+- YouTube embed moved into article body (was duplicated in create_post)
+- content_registry.py tracks each topic's performance across both platforms
+- Synergy report: % of content units with both video+blog
+
+### New file: modules/content_registry.py
+- ContentRegistry class: register, update metrics, query top-performing, synergy report
+- Convenience function register_from_pipeline() for one-liner integration
