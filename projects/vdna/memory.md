@@ -48,6 +48,7 @@
 - Evening Publish: 7PM IST (30 11 * * * UTC)
 - Channel Health Monitor: every 2h
 - Daily Analytics: 6AM IST
+- **Weekly CSV Download**: Mon 10AM IST (cron 08f2e0ae8960) → download 3 Studio reports (Video Performance, Traffic Sources, Engagement) → run `python3 scripts/ingest_studio_csv.py`. Started Jun 29 2026.
 - Weekly Analytics: Sun 6AM
 
 ## Key Files

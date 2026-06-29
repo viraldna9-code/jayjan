@@ -8,6 +8,8 @@
 - Videos: 88 files on disk (29 mains + 58 shorts), 16 YouTube published
 - **Production policy**: NO DELETE after YouTube publish
 - Upload: manual agent (VIRALDNA_UPLOAD_ENABLED=false)
+- **Weekly CSV download**: Every Monday 10AM IST → download 3 YouTube Studio reports (Video Performance, Traffic Sources, Engagement) → run `python3 scripts/ingest_studio_csv.py`. Cron ID: 08f2e0ae8960, delivers to Telegram. Started Jun 29 2026.
+- **Analytics**: data_guard.py blocks fabrication — only answers from real data (CTR log, channel stats, growth ledger)
 - **Publish schedule**: main +1hr, shorts +30min after upload (relative timing)
 - **Thumbnails**: large centered text (80px max), vertically+horizontally centered
 - Changelog: `projects/vdna/changes.md`

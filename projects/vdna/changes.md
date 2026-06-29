@@ -1,5 +1,19 @@
 # ViralDNA — Changes Log
 
+## 2026-06-29 — Data Guard + Weekly CSV Pipeline
+
+### New Module: modules/data_guard.py
+- Prevents LLM from fabricating analytics statistics
+- Questions blocked when data unavailable: traffic_sources, search_terms, audience_demographics, best_posting_time, shorts_sweet_spot, browse_feature_growth
+- Questions allowed from real data: ctr_per_video, subscriber_conversion, engagement_ratios, avg_view_duration, growth_forecast (with estimate caveat)
+- Every blocked response says "DO NOT FABRICATE" with Studio download instructions
+
+### New Cron Job (08f2e0ae8960)
+- Every Monday 10AM IST → reminds to download 3 YouTube Studio reports
+- Reports: Video Performance, Traffic Sources, Engagement
+- After download: run `python3 scripts/ingest_studio_csv.py`
+- Delivers to Telegram
+
 ## 2026-06-29 — Keyword Research Module (SEO Error #10 Fix)
 
 ### New Module: modules/keyword_research.py
