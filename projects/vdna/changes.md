@@ -1,5 +1,27 @@
 # ViralDNA — Changes Log
 
+## 2026-06-29 — Competitor Intelligence Pipeline
+
+### New Module: modules/competitor_intelligence.py
+- YouTube Data API search + pattern extraction for niche analysis
+- Saturation scoring: measures how crowded a topic is on YouTube
+- Content gap detection: finds underserved angles in a niche
+- Quota management: tracks daily API usage, caches results
+- Integrates with keyword_research.py get_search_volume for demand scoring
+
+### Modified: modules/edge_scorer.py
+- Added factor_competitor_saturation() — new edge scoring factor (0.02-0.15)
+- Uses competitor_intelligence to assess niche saturation before scoring
+
+### Modified: modules/keyword_research.py
+- Added get_search_volume() — per_search anchor for saturation/gap detection
+- Returns traffic score from Google Trends RSS per keyword
+
+### Modified: modules/script_generator.py
+- Added _truth_first_research() — pre-generation NER fact extraction
+- Extracts named entities from title/desc/context, injects into LLM prompt
+- Added RETENTION_BLUEPRINT constant — 8-step main structure, 3-step short, 5 mechanics
+
 ## 2026-06-29 — Data Guard + Weekly CSV Pipeline
 
 ### New Module: modules/data_guard.py
