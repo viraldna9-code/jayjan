@@ -26,7 +26,9 @@
 - Default OG: viraldna-og-default.jpg
 - Layout fixes applied: "Blog" h1 hidden, text-wrap CSS, overflow-x hidden, h1→h2 dedup
 - Publisher: wordpress_publisher.py (cookie + nonce auth, NOT basic auth)
-- Status: ALL 2026-06-26 fixes deployed
+- SEO: keyword_research.py — dynamic Google Trends + YouTube autocomplete
+  research, applied to blog H1 (`{title} | {keyword}`) and YouTube title
+- Status: ALL 2026-06-29 SEO fixes deployed (Errors #8, #9, #10 complete)
 
 ### church.mbitebyte.com
 - Faithful Messenger WP theme

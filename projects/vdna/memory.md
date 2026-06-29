@@ -21,18 +21,23 @@
 - Privacy: private
 - OAUTH: Manual terminal flow only (PKCE challenge binds URL+code to same process)
 
-## theviraldna.mbitebyte.com (Blog)
+## theviraldna.mbitebyte.com (Blog — Phase 1 COMPLETE)
 - Live: https://theviraldna.mbitebyte.com/
 - Theme: Twenty Twenty-Five (block theme)
-- Home template: custom 2-column layout (home.html)
-- Pages: About (6), Contact (11), Privacy (3)
-- Posts: 6 live (IDs 26, 48, 49, 50, 51 + default)
-- Plugin: vdna-seo.php v1.2.0 (SEO, meta tags, footer JS, sidebar, CSS)
-- OG image: wp-content/uploads/2026/06/viraldna-og-default.jpg
-- GSC: verified + sitemap submitted
-- FTP: church@mbitebyte.com @ 45.199.139.16:21 (old, working)
-- NEW FTP FAILING: theviraldna@mbitebyte.com (530 error)
-- Auth: wordpress_publisher.py uses cookie + nonce (Basic auth returns 444)
+- FTP: church@mbitebyte.com / hj8NZwq6#q$c @ 45.199.139.16:21
+- WP Admin: theviraldna_admin / b7qNRCsG93b!
+- Plugin: vdna-seo.php v1.2.0 (SEO, meta, footer JS, sidebar, CSS fixes)
+- Home: 2-column layout (75% posts + 25% sidebar), compact post list
+- Pages: About(6), Contact(11), Privacy(3) — all fixed (h1→h2, content populated)
+- Posts: 6 live (backfilled 4 from YouTube)
+- GSC: verified + sitemap submitted (success)
+- .htaccess: security headers added
+- Default OG: viraldna-og-default.jpg
+- Layout fixes applied: "Blog" h1 hidden, text-wrap CSS, overflow-x hidden, h1→h2 dedup
+- Publisher: wordpress_publisher.py (cookie + nonce auth, NOT basic auth)
+- SEO: keyword_research.py module — dynamic Google Trends + YouTube autocomplete
+  research, applied to blog H1 (`{title} | {keyword}`) and YouTube title
+- Status: ALL 2026-06-29 SEO fixes deployed (Errors #8, #9, #10 complete)
 
 ## Thumbnail Pipeline (v22.1)
 - NewsPayload strips " - Source Name" from Google News RSS titles (35+ known sources)

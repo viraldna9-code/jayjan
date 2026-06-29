@@ -1,5 +1,30 @@
 # ViralDNA — Changes Log
 
+## 2026-06-29 — Keyword Research Module (SEO Error #10 Fix)
+
+### New Module: modules/keyword_research.py
+- Dynamic keyword research replacing static HIGH_SEARCH_KEYWORDS dict
+- Sources: Google Trends India (live traffic scores via RSS) + YouTube autocomplete
+- 3 query strategies: full title, compound (top 3 keywords), longest named entity
+- Scoring: keyword overlap ratio + traffic volume; strict filter rejects unrelated trends
+- 6-hour disk cache to avoid rate limits
+- Graceful fallback if APIs unavailable
+
+### Pipeline Integration
+- script_generator.py: `_inject_search_keywords()` now calls `research_keywords_for_topic()`
+- vdna2_director.py: Runs keyword research before blog publish, applies to blog H1 title
+- Blog title format: `{title} | {keyword}` — H1 targets search-optimized phrase
+- wordpress_publisher.py: Stores `_vdna_target_keyword` post meta alongside `youtube_url`
+
+### SEO Errors Status
+- #8 OG tags: COMPLETE (full set verified live)
+- #9 Related Articles: COMPLETE (render_block filter, same-category + recent fallback)
+- #10 Keyword Research: COMPLETE (dynamic research, blog H1 + YouTube title optimization)
+
+### Git Commits
+- cca417e: feat: Dynamic keyword research module (Error #10 fix)
+- 9c7174c: fix: Apply keyword research to blog post title (H1 SEO)
+
 ## 2026-06-28 — Publish Scheduling + Thumbnail Centering + Upload
 
 ### Publish Schedule Rule
