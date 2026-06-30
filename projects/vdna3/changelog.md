@@ -1,5 +1,18 @@
 # VDNA 3.0 Changelog
 
+## 2026-06-30 — VDNA 4.0 Released (Supersedes VDNA 3.0)
+
+VDNA 4.0 is now the active pipeline. VDNA 3.0 files preserved for reference.
+See `projects/vdna/changes.md` for full VDNA 4.0 release notes.
+
+Key fixes in 4.0:
+- 29 duplicate skills dict keys → each skill mapped exactly once
+- 8 duplicate imports → eliminated
+- Class renamed VDNA2Director → VDNA4Director
+- Strict mode: no phase skipping allowed
+- Phase 0 (Genesis) added: bus load + data guard + disk check
+- 6 validation sub-phases added (1.1, 3.5, 4.5, 5.5, 6.5, 8.5)
+
 ## 2026-06-25 — Growth Readiness Completion (Options A, B, C, E)
 
 ### Options Completed

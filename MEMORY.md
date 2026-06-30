@@ -2,16 +2,21 @@
 
 ## Active Projects
 
-### ViralDNA (VDNA 3.0)
-- Pipeline: v96.0, 73+ modules, 86/86 compile
+### ViralDNA (VDNA 4.0 — current as of 2026-06-30)
+- Entry: `python3 run_vdna4.py` (STRICT mode default)
+- Director: `modules/vdna4_director.py` (class `VDNA4Director`)
+- 11 phases (0-10) + 6 validation sub-phases, no skipping allowed
+- Fixed VDNA 3.0 bugs: 29 duplicate skills keys, 8 duplicate imports, class name mismatch
+- Skills: 19 modules loaded (each key EXACTLY ONCE — no dedup bugs)
 - YouTube: @TheViralDNA (UCkW7fqkJiaej2PeNcP4PejQ)
 - Videos: 88 files on disk (29 mains + 58 shorts), 16 YouTube published
 - **Production policy**: NO DELETE after YouTube publish
 - Upload: manual agent (VIRALDNA_UPLOAD_ENABLED=false)
-- **Weekly CSV download**: Every Monday 10AM IST → download 3 YouTube Studio reports (Video Performance, Traffic Sources, Engagement) → run `python3 scripts/ingest_studio_csv.py`. Cron ID: 08f2e0ae8960, delivers to Telegram. Started Jun 29 2026.
-- **Analytics**: data_guard.py blocks fabrication — only answers from real data (CTR log, channel stats, growth ledger)
+- **Weekly CSV download**: Every Monday 10AM IST → download 3 YouTube Studio reports → `scripts/ingest_studio_csv.py`. Cron ID: 08f2e0ae8960
+- **Analytics**: data_guard.py blocks fabrication — only answers from real data
 - **Publish schedule**: main +1hr, shorts +30min after upload (relative timing)
 - **Thumbnails**: large centered text (80px max), vertically+horizontally centered
+- VDNA 3.0 kept for reference: `run_vdna3.py` + `modules/vdna2_director.py`
 - Changelog: `projects/vdna/changes.md`
 
 ### theviraldna.mbitebyte.com (Blog — Phase 1 COMPLETE)

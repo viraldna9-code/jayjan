@@ -1,5 +1,34 @@
 # ViralDNA — Changes Log
 
+## 2026-06-30 — VDNA 4.0 Pipeline (Major Release)
+
+### New Module: modules/vdna4_director.py
+- Complete rewrite of VDNA 3.0 director (VDNA2Director → VDNA4Director)
+- **Fixed critical bug**: 29 duplicate keys in skills dict (last-write-wins silent corruption)
+- **Fixed**: 8 duplicate import statements eliminated
+- **Fixed**: Class name mismatch (was VDNA2Director, now VDNA4Director)
+- **Fixed**: All prints consistently say "VDNA 4.0"
+- 11 main phases (0-10) + 6 validation sub-phases
+- STRICT mode ON by default — no phase can be silently skipped
+- FactoryWorker with crash isolation, timeout enforcement, fallback chain
+- Phase 0 (Genesis): growth bus load + data guard inventory + disk check
+- Phase 9 (Post-Pipeline): 18 sub-phases (analytics, blog, Telegram, growth agents)
+- Skills: 19 modules loaded (each key EXACTLY ONCE — verified no dedup)
+
+### New File: run_vdna4.py
+- Clean entrypoint for VDNA 4.0 pipeline
+- CLI args: --topic, --topic-file, --run-id, --no-strict
+- Loads .env, initializes VDNA4Director, runs pipeline
+
+### New File: CHANGELOG_vdna4.md
+- Full migration guide from VDNA 3.0 → 4.0
+- Bug fix documentation
+- Architecture reference
+
+### Preserved (VDNA 3.0 — reference only)
+- run_vdna3.py — kept for backward compatibility
+- modules/vdna2_director.py — kept for reference (not used by VDNA 4.0)
+
 ## 2026-06-29 — Competitor Intelligence Pipeline
 
 ### New Module: modules/competitor_intelligence.py
